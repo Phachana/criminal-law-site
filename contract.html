@@ -1,0 +1,19 @@
+<ul>
+  <li><a href="#" onclick="showComingSoon()">นิติกรรมและสัญญา</a></li>
+</ul>
+
+<div id="content-area"></div>
+
+<script>
+  function loadPage(page) {
+    fetch(page)
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('content-area').innerHTML = html;
+      });
+  }
+
+  function showComingSoon() {
+    document.getElementById('content-area').innerHTML = "<h2>อยู่ระหว่างการพัฒนา</h2><p>เนื้อหานี้จะอัปเดตเร็ว ๆ นี้ กรุณาติดตามต่อไป</p>";
+  }
+</script>
